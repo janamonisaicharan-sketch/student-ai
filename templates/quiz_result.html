@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Quiz Result</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <style>
+
+        .result-box{
+
+            width:600px;
+
+            margin:auto;
+
+            margin-top:120px;
+
+            background:#111827;
+
+            padding:50px;
+
+            border-radius:25px;
+
+            border:2px solid cyan;
+
+            text-align:center;
+
+            box-shadow:0 0 25px rgba(0,255,255,0.2);
+
+        }
+
+        .result-box h1{
+
+            color:cyan;
+
+            margin-bottom:25px;
+
+            text-shadow:0 0 15px cyan;
+
+        }
+
+        .result-box p{
+
+            font-size:22px;
+
+            margin-bottom:30px;
+
+        }
+
+        .result-box a{
+
+            display:inline-block;
+
+            text-decoration:none;
+
+            background:cyan;
+
+            color:black;
+
+            padding:15px 30px;
+
+            border-radius:15px;
+
+            font-weight:bold;
+
+            transition:0.3s;
+
+        }
+
+        .result-box a:hover{
+
+            transform:scale(1.05);
+
+            box-shadow:0 0 20px cyan;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="result-box">
+
+    <h1>
+
+        🎉 Quiz Completed
+
+    </h1>
+
+    <p>
+
+   
+
+<p>
+
+    Your Score:
+
+    <br><br>
+
+
+{{ score }}/{{ total }}
+
+
+</p>
+
+
+
+    </p>
+
+    <a href="/chat">
+
+        Back To Chat
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

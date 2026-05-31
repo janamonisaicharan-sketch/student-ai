@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Quiz</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <style>
+
+        .quiz-box{
+
+            width:700px;
+
+            margin:auto;
+
+            margin-top:80px;
+
+            background:#111827;
+
+            padding:40px;
+
+            border-radius:25px;
+
+            border:2px solid cyan;
+
+            box-shadow:0 0 25px rgba(0,255,255,0.2);
+
+        }
+
+        .quiz-box h1{
+
+            color:cyan;
+
+            margin-bottom:25px;
+
+            text-align:center;
+
+        }
+
+        .question{
+
+            font-size:22px;
+
+            margin-bottom:25px;
+
+        }
+.option{
+
+    display:block;
+
+    width:100%;
+
+    background:#1e293b;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    border-radius:15px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+.option input{
+
+    margin-right:10px;
+
+}
+        
+    </style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        🤖 Student AI
+
+    </div>
+
+    <div class="menu">
+
+        <a href="/chat">
+
+            💬 Chat
+
+        </a>
+
+        <a href="/history">
+
+            📜 History
+
+        </a>
+
+        <a href="/logout">
+
+            🚪 Logout
+
+        </a>
+
+    </div>
+
+</div>
+
+<div class="main">
+
+    <div class="quiz-box">
+
+        <h1>
+
+            🧠 AI Quiz System
+
+
+
+<form action="/quiz_result" method="GET">
+
+{% for q in questions %}
+
+    {% set qnum = loop.index %}
+
+    <div class="question">
+
+        {{ qnum }}. {{ q.question }}
+
+    </div>
+
+    {% for option in q.options %}
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="q{{ qnum }}"
+                value="{{ option }}"
+                required
+            >
+
+            {{ option }}
+
+        </label>
+
+    {% endfor %}
+
+    <br>
+
+{% endfor %}
+
+<button
+    type="submit"
+    style="
+    padding:15px 25px;
+    border:none;
+    border-radius:15px;
+    background:cyan;
+    font-weight:bold;
+    cursor:pointer;
+    "
+>
+
+    Submit Quiz
+
+</button>
+
+</form>
+
+
+
+    </div>
+
+</body>
+
+</html>

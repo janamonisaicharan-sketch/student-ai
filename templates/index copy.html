@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        🤖 Student AI
+
+    </div>
+
+    <div class="menu">
+
+        <a href="/history">
+
+            📜 History
+
+        </a>
+
+        <a href="/quiz">
+
+            🧠 Quiz
+
+        </a>
+
+        <a href="/logout">
+
+            🚪 Logout
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <form
+            method="POST"
+            class="search-form"
+        >
+
+            <input
+                type="text"
+                name="question"
+                placeholder="Ask anything futuristic..."
+                required
+            >
+
+            <button type="submit">
+
+                Search
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- CLOCK -->
+
+    <div class="clock-box">
+
+        <h2 id="clock">
+
+            00:00:00
+
+        </h2>
+
+        <p id="date">
+
+            Loading Date...
+
+        </p>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div
+        class="chat-area"
+        id="chat-area"
+    >
+
+        <!-- AI HEADER -->
+
+        <div class="ai-header">
+
+            <h1>
+
+                🚀 Future AI Assistant
+
+            </h1>
+
+            <p>
+
+                Welcome {{username}}
+
+            </p>
+
+        </div>
+
+        <!-- CHAT -->
+
+        {% for item in chat|reverse %}
+
+        <div class="chat-box">
+
+            <div class="question">
+
+                You:
+                {{item.question}}
+
+            </div>
+
+            <div class="answer typing">
+
+                AI:
+                {{item.answer}}
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+        <!-- TEACH AI -->
+
+        {% if session.get("unknown_question") %}
+
+        <div class="chat-box">
+
+            <div class="question">
+
+                Teach AI Answer
+
+            </div>
+
+            <form method="POST">
+
+                <input
+                    type="text"
+                    name="teach_answer"
+                    placeholder="Type the correct answer..."
+                    required
+
+                    style="
+                    width:100%;
+                    padding:18px;
+                    margin-top:15px;
+                    border:none;
+                    border-radius:15px;
+                    background:#1e293b;
+                    color:white;
+                    font-size:16px;
+                    "
+                >
+
+                <button
+                    type="submit"
+
+                    style="
+                    margin-top:15px;
+                    padding:15px 25px;
+                    border:none;
+                    border-radius:15px;
+                    background:cyan;
+                    color:black;
+                    font-weight:bold;
+                    cursor:pointer;
+                    "
+                >
+
+                    Teach AI
+
+                </button>
+
+            </form>
+
+        </div>
+
+        {% endif %}
+
+        <!-- SEARCH BUTTONS -->
+
+        {% if session.get("browser_link") %}
+
+        <div class="chat-box">
+
+            <div class="question">
+
+                🌐 Search Options
+
+            </div>
+
+            <a
+                href="{{session['browser_link']}}"
+                target="_blank"
+            >
+
+                <button
+
+                    style="
+                    margin-top:15px;
+                    padding:15px 25px;
+                    border:none;
+                    border-radius:15px;
+                    background:cyan;
+                    color:black;
+                    font-weight:bold;
+                    cursor:pointer;
+                    "
+                >
+
+                    Open Browser Search
+
+                </button>
+
+            </a>
+
+            <a
+                href="{{session['youtube_link']}}"
+                target="_blank"
+            >
+
+                <button
+
+                    style="
+                    margin-top:15px;
+                    margin-left:10px;
+                    padding:15px 25px;
+                    border:none;
+                    border-radius:15px;
+                    background:red;
+                    color:white;
+                    font-weight:bold;
+                    cursor:pointer;
+                    "
+                >
+
+                    ▶️ Open YouTube
+
+                </button>
+
+            </a>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<script>
+
+    // AUTO SCROLL
+
+    var chatArea =
+    document.getElementById(
+        "chat-area"
+    );
+
+    chatArea.scrollTop =
+    chatArea.scrollHeight;
+
+    // CLOCK
+
+    function updateClock(){
+
+        const now = new Date();
+
+        document.getElementById(
+            "clock"
+        ).innerHTML =
+        now.toLocaleTimeString();
+
+        document.getElementById(
+            "date"
+        ).innerHTML =
+        now.toDateString();
+
+    }
+
+    setInterval(updateClock, 1000);
+
+    updateClock();
+
+</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,171 @@
+```html id="ly4nzc"
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <style>
+
+        .center-box{
+
+            width:400px;
+
+            margin:auto;
+
+            margin-top:120px;
+
+            background:rgba(15,23,42,0.95);
+
+            padding:40px;
+
+            border-radius:25px;
+
+            border:2px solid cyan;
+
+            box-shadow:0 0 30px rgba(0,255,255,0.3);
+
+            animation:fadeIn 0.5s ease;
+
+        }
+
+        .center-box h1{
+
+            text-align:center;
+
+            color:cyan;
+
+            margin-bottom:30px;
+
+            text-shadow:0 0 15px cyan;
+
+        }
+
+        .center-box input{
+
+            width:100%;
+
+            padding:18px;
+
+            margin-bottom:20px;
+
+            border:none;
+
+            border-radius:15px;
+
+            background:#1e293b;
+
+            color:white;
+
+            font-size:16px;
+
+        }
+
+        .center-box button{
+
+            width:100%;
+
+            padding:18px;
+
+            border:none;
+
+            border-radius:15px;
+
+            background:cyan;
+
+            color:black;
+
+            font-weight:bold;
+
+            cursor:pointer;
+
+            transition:0.3s;
+
+        }
+
+        .center-box button:hover{
+
+            transform:scale(1.03);
+
+            box-shadow:0 0 20px cyan;
+
+        }
+
+        .center-box p{
+
+            text-align:center;
+
+            margin-top:20px;
+
+        }
+
+        .center-box a{
+
+            color:cyan;
+
+            text-decoration:none;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="center-box">
+
+    <h1>
+
+        🤖 Student AI Login
+
+    </h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+
+        <button type="submit">
+
+            Login
+
+        </button>
+
+    </form>
+
+    <p>
+
+        Don't have an account?
+
+        <a href="/signup">
+
+            Signup
+
+        </a>
+
+    </p>
+
+</div>
+
+</body>
+
+</html>
+

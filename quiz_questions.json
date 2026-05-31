@@ -1,0 +1,54 @@
+
+[
+    {
+        "question": "What does AI stand for?",
+        "options": [
+            "Artificial Intelligence",
+            "Automatic Internet",
+            "Advanced Input",
+            "Artificial Internet"
+        ],
+        "correct": "Artificial Intelligence"
+    },
+    {
+        "question": "Who created ChatGPT?",
+        "options": [
+            "OpenAI",
+            "Google",
+            "Microsoft",
+            "Apple"
+        ],
+        "correct": "OpenAI"
+    },
+    {
+        "question": "What language is Flask written in?",
+        "options": [
+            "Python",
+            "Java",
+            "C++",
+            "PHP"
+        ],
+        "correct": "Python"
+    },
+    {
+        "question": "What does HTML stand for?",
+        "options": [
+            "HyperText Markup Language",
+            "HighText Machine Language",
+            "Home Tool Markup Language",
+            "Hyper Transfer Markup Language"
+        ],
+        "correct": "HyperText Markup Language"
+    },
+    {
+        "question": "What does CSS do?",
+        "options": [
+            "Styles web pages",
+            "Stores databases",
+            "Runs servers",
+            "Creates hardware"
+        ],
+        "correct": "Styles web pages"
+    }
+]
+

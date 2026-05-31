@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>History</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        🤖 Student AI
+
+    </div>
+
+    <div class="menu">
+
+        <a href="/chat">
+
+            💬 Chat
+
+        </a>
+
+        <a href="/quiz">
+
+            🧠 Quiz
+
+        </a>
+
+        <a href="/logout">
+
+            🚪 Logout
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h2 style="color:cyan;">
+
+            📜 Chat History
+
+        </h2>
+
+    </div>
+
+    <div class="chat-area">
+
+        {% for item in history %}
+
+        <div class="chat-box">
+
+            <div class="question">
+
+                {{item.user}} :
+
+                {{item.question}}
+
+            </div>
+
+            <div class="answer">
+
+                {{item.answer}}
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
+
