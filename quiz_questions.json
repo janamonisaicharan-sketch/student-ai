@@ -49,6 +49,1957 @@
             "Creates hardware"
         ],
         "correct": "Styles web pages"
-    }
-]
+    },
 
+
+{
+"question": "Which company developed Python?",
+"options": [
+"Python Software Foundation",
+"Microsoft",
+"Google",
+"Apple"
+],
+"correct": "Python Software Foundation"
+},
+{
+"question": "Who created Python?",
+"options": [
+"Guido van Rossum",
+"Bill Gates",
+"Elon Musk",
+"Mark Zuckerberg"
+],
+"correct": "Guido van Rossum"
+},
+{
+"question": "Which symbol is used for comments in Python?",
+"options": [
+"#",
+"//",
+"/*",
+"--"
+],
+"correct": "#"
+},
+{
+"question": "Which HTML tag creates a hyperlink?",
+"options": [
+"<a>",
+"<link>",
+"<href>",
+"<url>"
+],
+"correct": "<a>"
+},
+{
+"question": "Which HTML tag displays an image?",
+"options": [
+"<img>",
+"<image>",
+"<pic>",
+"<src>"
+],
+"correct": "<img>"
+},
+{
+"question": "What does CPU stand for?",
+"options": [
+"Central Processing Unit",
+"Computer Processing Unit",
+"Central Program Unit",
+"Computer Program Utility"
+],
+"correct": "Central Processing Unit"
+},
+{
+"question": "What does RAM stand for?",
+"options": [
+"Random Access Memory",
+"Read Access Memory",
+"Rapid Access Module",
+"Random Application Memory"
+],
+"correct": "Random Access Memory"
+},
+{
+"question": "Which planet is known as the Red Planet?",
+"options": [
+"Mars",
+"Venus",
+"Earth",
+"Mercury"
+],
+"correct": "Mars"
+},
+{
+"question": "Which planet is closest to the Sun?",
+"options": [
+"Mercury",
+"Venus",
+"Earth",
+"Mars"
+],
+"correct": "Mercury"
+},
+{
+"question": "What is the largest planet in our solar system?",
+"options": [
+"Jupiter",
+"Saturn",
+"Earth",
+"Mars"
+],
+"correct": "Jupiter"
+},
+{
+"question": "What is 12 × 12?",
+"options": [
+"144",
+"124",
+"132",
+"154"
+],
+"correct": "144"
+},
+{
+"question": "What is the square root of 81?",
+"options": [
+"9",
+"8",
+"7",
+"6"
+],
+"correct": "9"
+},
+{
+"question": "Which country has the largest population?",
+"options": [
+"India",
+"China",
+"USA",
+"Russia"
+],
+"correct": "India"
+},
+{
+"question": "What is the capital of India?",
+"options": [
+"New Delhi",
+"Mumbai",
+"Kolkata",
+"Chennai"
+],
+"correct": "New Delhi"
+},
+{
+"question": "What is the capital of Japan?",
+"options": [
+"Tokyo",
+"Osaka",
+"Kyoto",
+"Nagoya"
+],
+"correct": "Tokyo"
+},
+{
+"question": "Which gas do humans breathe in?",
+"options": [
+"Oxygen",
+"Carbon Dioxide",
+"Nitrogen",
+"Hydrogen"
+],
+"correct": "Oxygen"
+},
+{
+"question": "What is H2O commonly called?",
+"options": [
+"Water",
+"Salt",
+"Hydrogen",
+"Oxygen"
+],
+"correct": "Water"
+},
+{
+"question": "What does URL stand for?",
+"options": [
+"Uniform Resource Locator",
+"Universal Resource Link",
+"Uniform Reference Link",
+"Universal Routing Locator"
+],
+"correct": "Uniform Resource Locator"
+},
+{
+"question": "Which company owns YouTube?",
+"options": [
+"Google",
+"Microsoft",
+"Apple",
+"Meta"
+],
+"correct": "Google"
+},
+{
+"question": "Which company owns Instagram?",
+"options": [
+"Meta",
+"Google",
+"Microsoft",
+"Apple"
+],
+"correct": "Meta"
+},
+{
+"question": "What does GPU stand for?",
+"options": [
+"Graphics Processing Unit",
+"General Processing Unit",
+"Graphics Program Utility",
+"Global Processing Unit"
+],
+"correct": "Graphics Processing Unit"
+},
+{
+"question": "Which company created Windows?",
+"options": [
+"Microsoft",
+"Apple",
+"Google",
+"IBM"
+],
+"correct": "Microsoft"
+},
+{
+"question": "Which company created Android?",
+"options": [
+"Google",
+"Apple",
+"Microsoft",
+"Samsung"
+],
+"correct": "Google"
+},
+{
+"question": "Which symbol is used for multiplication in Python?",
+"options": [
+"*",
+"x",
+"#",
+"&"
+],
+"correct": "*"
+},
+{
+"question": "What does WWW stand for?",
+"options": [
+"World Wide Web",
+"World Web Wide",
+"Web World Wide",
+"Wide World Web"
+],
+"correct": "World Wide Web"
+},
+{
+"question": "Which is the largest ocean?",
+"options": [
+"Pacific Ocean",
+"Atlantic Ocean",
+"Indian Ocean",
+"Arctic Ocean"
+],
+"correct": "Pacific Ocean"
+},
+{
+"question": "What is the boiling point of water?",
+"options": [
+"100°C",
+"90°C",
+"80°C",
+"120°C"
+],
+"correct": "100°C"
+},
+{
+"question": "Which animal is known as the King of the Jungle?",
+"options": [
+"Lion",
+"Tiger",
+"Elephant",
+"Leopard"
+],
+"correct": "Lion"
+},
+{
+"question": "How many continents are there?",
+"options": [
+"7",
+"5",
+"6",
+"8"
+],
+"correct": "7"
+},
+{
+"question": "What is 15 + 27?",
+"options": [
+"42",
+"41",
+"43",
+"44"
+],
+"correct": "42"
+},
+{
+"question": "What is 100 ÷ 10?",
+"options": [
+"10",
+"20",
+"5",
+"15"
+],
+"correct": "10"
+},
+{
+"question": "Which language is used for web page styling?",
+"options": [
+"CSS",
+"HTML",
+"Python",
+"SQL"
+],
+"correct": "CSS"
+},
+{
+"question": "Which language is used to structure web pages?",
+"options": [
+"HTML",
+"CSS",
+"Python",
+"Java"
+],
+"correct": "HTML"
+},
+{
+"question": "Which database language is most common?",
+"options": [
+"SQL",
+"HTML",
+"CSS",
+"Python"
+],
+"correct": "SQL"
+},
+{
+"question": "Which company makes the iPhone?",
+"options": [
+"Apple",
+"Samsung",
+"Google",
+"Microsoft"
+],
+"correct": "Apple"
+},
+{
+"question": "Which country invented paper?",
+"options": [
+"China",
+"India",
+"Egypt",
+"Japan"
+],
+"correct": "China"
+},
+{
+"question": "Which is the fastest land animal?",
+"options": [
+"Cheetah",
+"Lion",
+"Horse",
+"Tiger"
+],
+"correct": "Cheetah"
+},
+{
+"question": "What is the capital of Australia?",
+"options": [
+"Canberra",
+"Sydney",
+"Melbourne",
+"Perth"
+],
+"correct": "Canberra"
+},
+{
+"question": "What is the capital of the USA?",
+"options": [
+"Washington D.C.",
+"New York",
+"Los Angeles",
+"Chicago"
+],
+"correct": "Washington D.C."
+},
+{
+"question": "How many days are there in a leap year?",
+"options": [
+"366",
+"365",
+"364",
+"367"
+],
+"correct": "366"
+},
+{
+"question": "What is the national animal of India?",
+"options": [
+"Tiger",
+"Lion",
+"Elephant",
+"Peacock"
+],
+"correct": "Tiger"
+},
+{
+"question": "What is the national bird of India?",
+"options": [
+"Peacock",
+"Parrot",
+"Eagle",
+"Sparrow"
+],
+"correct": "Peacock"
+},
+{
+"question": "Which is the smallest planet in the solar system?",
+"options": [
+"Mercury",
+"Mars",
+"Venus",
+"Earth"
+],
+"correct": "Mercury"
+},
+{
+"question": "What is 9 × 8?",
+"options": [
+"72",
+"81",
+"64",
+"70"
+],
+"correct": "72"
+},
+{
+"question": "What is 50 + 25?",
+"options": [
+"75",
+"70",
+"80",
+"65"
+],
+"correct": "75"
+},
+{
+"question": "Which organ pumps blood in the human body?",
+"options": [
+"Heart",
+"Lungs",
+"Brain",
+"Kidney"
+],
+"correct": "Heart"
+},
+{
+"question": "Which planet is known for its rings?",
+"options": [
+"Saturn",
+"Mars",
+"Earth",
+"Mercury"
+],
+"correct": "Saturn"
+},
+{
+"question": "How many sides does a triangle have?",
+"options": [
+"3",
+"4",
+"5",
+"6"
+],
+"correct": "3"
+},
+{
+"question": "How many sides does a square have?",
+"options": [
+"4",
+"3",
+"5",
+"6"
+],
+"correct": "4"
+},
+{
+"question": "Which is the largest mammal?",
+"options": [
+"Blue Whale",
+"Elephant",
+"Giraffe",
+"Rhino"
+],
+"correct": "Blue Whale"
+},
+{
+"question": "Which company owns WhatsApp?",
+"options": [
+"Meta",
+"Google",
+"Microsoft",
+"Apple"
+],
+"correct": "Meta"
+},
+{
+"question": "What does USB stand for?",
+"options": [
+"Universal Serial Bus",
+"Universal Service Bus",
+"United Serial Bus",
+"Universal Storage Bus"
+],
+"correct": "Universal Serial Bus"
+},
+{
+"question": "Which key is used to refresh a webpage?",
+"options": [
+"F5",
+"F1",
+"F2",
+"F10"
+],
+"correct": "F5"
+},
+{
+"question": "Which company created ChatGPT?",
+"options": [
+"OpenAI",
+"Google",
+"Microsoft",
+"Amazon"
+],
+"correct": "OpenAI"
+},
+{
+"question": "What is the capital of France?",
+"options": [
+"Paris",
+"London",
+"Berlin",
+"Rome"
+],
+"correct": "Paris"
+},
+{
+"question": "What is the capital of Germany?",
+"options": [
+"Berlin",
+"Paris",
+"Madrid",
+"Rome"
+],
+"correct": "Berlin"
+},
+{
+"question": "What is the capital of Italy?",
+"options": [
+"Rome",
+"Paris",
+"Berlin",
+"Madrid"
+],
+"correct": "Rome"
+},
+{
+"question": "What is the capital of Canada?",
+"options": [
+"Ottawa",
+"Toronto",
+"Vancouver",
+"Montreal"
+],
+"correct": "Ottawa"
+},
+{
+"question": "What is the largest desert in the world?",
+"options": [
+"Antarctic Desert",
+"Sahara",
+"Arabian Desert",
+"Gobi"
+],
+"correct": "Antarctic Desert"
+},
+{
+"question": "Which planet supports life?",
+"options": [
+"Earth",
+"Mars",
+"Venus",
+"Jupiter"
+],
+"correct": "Earth"
+},
+{
+"question": "What does AI stand for in computing?",
+"options": [
+"Artificial Intelligence",
+"Automatic Information",
+"Advanced Internet",
+"Artificial Internet"
+],
+"correct": "Artificial Intelligence"
+},
+{
+"question": "Which company owns ChatGPT?",
+"options": [
+"OpenAI",
+"Google",
+"Meta",
+"Apple"
+],
+"correct": "OpenAI"
+},
+{
+"question": "Which keyword is used to define a function in Python?",
+"options": [
+"def",
+"function",
+"func",
+"define"
+],
+"correct": "def"
+},
+{
+"question": "Which symbol is used to assign a value in Python?",
+"options": [
+"=",
+"==",
+":=",
+"=>"
+],
+"correct": "="
+},
+{
+"question": "What is the output type of input() in Python?",
+"options": [
+"String",
+"Integer",
+"Float",
+"Boolean"
+],
+"correct": "String"
+},
+{
+"question": "Which HTML tag creates a paragraph?",
+"options": [
+"<p>",
+"<para>",
+"<paragraph>",
+"<pg>"
+],
+"correct": "<p>"
+},
+{
+"question": "Which HTML tag creates a heading?",
+"options": [
+"<h1>",
+"<head>",
+"<heading>",
+"<title>"
+],
+"correct": "<h1>"
+},
+{
+"question": "What does CSS stand for?",
+"options": [
+"Cascading Style Sheets",
+"Creative Style Sheets",
+"Computer Style Sheets",
+"Colorful Style Sheets"
+],
+"correct": "Cascading Style Sheets"
+},
+{
+"question": "Which language runs in the browser?",
+"options": [
+"JavaScript",
+"Python",
+"C++",
+"Java"
+],
+"correct": "JavaScript"
+},
+{
+"question": "What is the brain of the computer?",
+"options": [
+"CPU",
+"RAM",
+"GPU",
+"Hard Disk"
+],
+"correct": "CPU"
+},
+{
+"question": "Which storage device is fastest?",
+"options": [
+"SSD",
+"HDD",
+"DVD",
+"USB 2.0"
+],
+"correct": "SSD"
+},
+{
+"question": "What does HTTP stand for?",
+"options": [
+"HyperText Transfer Protocol",
+"HighText Transfer Protocol",
+"Hyper Transfer Text Program",
+"Home Transfer Protocol"
+],
+"correct": "HyperText Transfer Protocol"
+},
+{
+"question": "What does HTTPS provide?",
+"options": [
+"Security",
+"Speed",
+"Storage",
+"Styling"
+],
+"correct": "Security"
+},
+{
+"question": "Which company developed Chrome?",
+"options": [
+"Google",
+"Microsoft",
+"Apple",
+"Mozilla"
+],
+"correct": "Google"
+},
+{
+"question": "Which company developed Firefox?",
+"options": [
+"Mozilla",
+"Google",
+"Microsoft",
+"Apple"
+],
+"correct": "Mozilla"
+},
+{
+"question": "What is 7 × 9?",
+"options": [
+"63",
+"72",
+"56",
+"81"
+],
+"correct": "63"
+},
+{
+"question": "What is 144 ÷ 12?",
+"options": [
+"12",
+"14",
+"10",
+"16"
+],
+"correct": "12"
+},
+{
+"question": "How many hours are there in a day?",
+"options": [
+"24",
+"12",
+"48",
+"60"
+],
+"correct": "24"
+},
+{
+"question": "How many minutes are there in an hour?",
+"options": [
+"60",
+"30",
+"100",
+"24"
+],
+"correct": "60"
+},
+{
+"question": "What is the largest continent?",
+"options": [
+"Asia",
+"Africa",
+"Europe",
+"North America"
+],
+"correct": "Asia"
+},
+{
+"question": "Which is the largest country by area?",
+"options": [
+"Russia",
+"Canada",
+"China",
+"USA"
+],
+"correct": "Russia"
+},
+{
+"question": "Which is the longest river in the world?",
+"options": [
+"Nile",
+"Amazon",
+"Ganges",
+"Yangtze"
+],
+"correct": "Nile"
+},
+{
+"question": "How many planets are in the solar system?",
+"options": [
+"8",
+"9",
+"7",
+"10"
+],
+"correct": "8"
+},
+{
+"question": "What is the chemical symbol for gold?",
+"options": [
+"Au",
+"Ag",
+"Go",
+"Gd"
+],
+"correct": "Au"
+},
+{
+"question": "What is the chemical symbol for silver?",
+"options": [
+"Ag",
+"Au",
+"Si",
+"Sr"
+],
+"correct": "Ag"
+},
+{
+"question": "Which organ helps humans think?",
+"options": [
+"Brain",
+"Heart",
+"Lungs",
+"Liver"
+],
+"correct": "Brain"
+},
+{
+"question": "How many bones are in an adult human body?",
+"options": [
+"206",
+"210",
+"201",
+"220"
+],
+"correct": "206"
+},
+{
+"question": "Which blood type is known as the universal donor?",
+"options": [
+"O Negative",
+"AB Positive",
+"A Positive",
+"B Positive"
+],
+"correct": "O Negative"
+},
+{
+"question": "What is the hardest natural substance?",
+"options": [
+"Diamond",
+"Gold",
+"Iron",
+"Quartz"
+],
+"correct": "Diamond"
+},
+{
+"question": "What is the freezing point of water?",
+"options": [
+"0°C",
+"10°C",
+"32°C",
+"-10°C"
+],
+"correct": "0°C"
+},
+{
+"question": "Which gas do plants absorb?",
+"options": [
+"Carbon Dioxide",
+"Oxygen",
+"Hydrogen",
+"Nitrogen"
+],
+"correct": "Carbon Dioxide"
+},
+{
+"question": "Which gas do plants release?",
+"options": [
+"Oxygen",
+"Carbon Dioxide",
+"Hydrogen",
+"Nitrogen"
+],
+"correct": "Oxygen"
+},
+{
+"question": "What is 25 × 4?",
+"options": [
+"100",
+"75",
+"125",
+"80"
+],
+"correct": "100"
+},
+{
+"question": "What is 1000 ÷ 100?",
+"options": [
+"10",
+"100",
+"20",
+"5"
+],
+"correct": "10"
+},
+{
+"question": "How many months are in a year?",
+"options": [
+"12",
+"10",
+"11",
+"13"
+],
+"correct": "12"
+},
+{
+"question": "Which day comes after Friday?",
+"options": [
+"Saturday",
+"Sunday",
+"Monday",
+"Thursday"
+],
+"correct": "Saturday"
+},
+{
+"question": "Which is the tallest mountain in the world?",
+"options": [
+"Mount Everest",
+"K2",
+"Kangchenjunga",
+"Makalu"
+],
+"correct": "Mount Everest"
+},
+{
+"question": "Which country is famous for the pyramids?",
+"options": [
+"Egypt",
+"India",
+"Mexico",
+"China"
+],
+"correct": "Egypt"
+},
+{
+"question": "Who invented the light bulb?",
+"options": [
+"Thomas Edison",
+"Newton",
+"Einstein",
+"Tesla"
+],
+"correct": "Thomas Edison"
+},
+{
+"question": "Who developed the theory of relativity?",
+"options": [
+"Albert Einstein",
+"Newton",
+"Galileo",
+"Tesla"
+],
+"correct": "Albert Einstein"
+},
+{
+"question": "What does API stand for?",
+"options": [
+"Application Programming Interface",
+"Advanced Program Interface",
+"Application Process Integration",
+"Automated Program Interaction"
+],
+"correct": "Application Programming Interface"
+},
+{
+"question": "Which Python data type stores multiple values?",
+"options": [
+"List",
+"Integer",
+"Float",
+"String"
+],
+"correct": "List"
+},
+{
+"question": "Which keyword is used for loops in Python?",
+"options": [
+"for",
+"loop",
+"repeat",
+"iterate"
+],
+"correct": "for"
+},
+{
+"question": "Which keyword is used for conditions in Python?",
+"options": [
+"if",
+"when",
+"check",
+"condition"
+],
+"correct": "if"
+},
+{
+"question": "What is the extension of a Python file?",
+"options": [
+".py",
+".python",
+".pt",
+".pyt"
+],
+"correct": ".py"
+},
+{
+"question": "Which company developed Windows 11?",
+"options": [
+"Microsoft",
+"Google",
+"Apple",
+"IBM"
+],
+"correct": "Microsoft"
+},
+{
+"question": "Which company developed macOS?",
+"options": [
+"Apple",
+"Google",
+"Microsoft",
+"IBM"
+],
+"correct": "Apple"
+},
+{
+"question": "Which operating system is open source?",
+"options": [
+"Linux",
+"Windows",
+"macOS",
+"iOS"
+],
+"correct": "Linux"
+},
+{
+"question": "What does LAN stand for?",
+"options": [
+"Local Area Network",
+"Large Area Network",
+"Long Area Network",
+"Linked Area Network"
+],
+"correct": "Local Area Network"
+},
+{
+"question": "What does WAN stand for?",
+"options": [
+"Wide Area Network",
+"Wireless Area Network",
+"Web Area Network",
+"World Area Network"
+],
+"correct": "Wide Area Network"
+},
+{
+"question": "What does Wi-Fi provide?",
+"options": [
+"Wireless Internet Connection",
+"Storage",
+"Graphics",
+"Programming"
+],
+"correct": "Wireless Internet Connection"
+},
+{
+"question": "Which device connects networks together?",
+"options": [
+"Router",
+"Monitor",
+"Keyboard",
+"Printer"
+],
+"correct": "Router"
+},
+{
+"question": "Which device displays computer output?",
+"options": [
+"Monitor",
+"CPU",
+"Keyboard",
+"Mouse"
+],
+"correct": "Monitor"
+},
+{
+"question": "Which device is used to type text?",
+"options": [
+"Keyboard",
+"Monitor",
+"Speaker",
+"Scanner"
+],
+"correct": "Keyboard"
+},
+{
+"question": "Which device is used to move the cursor?",
+"options": [
+"Mouse",
+"Monitor",
+"Printer",
+"Scanner"
+],
+"correct": "Mouse"
+},
+{
+"question": "Which HTML tag creates a line break?",
+"options": [
+"<br>",
+"<break>",
+"<lb>",
+"<newline>"
+],
+"correct": "<br>"
+},
+{
+"question": "Which HTML tag creates a table?",
+"options": [
+"<table>",
+"<tab>",
+"<tbl>",
+"<grid>"
+],
+"correct": "<table>"
+},
+{
+"question": "Which CSS property changes text color?",
+"options": [
+"color",
+"font-color",
+"text-color",
+"style"
+],
+"correct": "color"
+},
+{
+"question": "Which CSS property changes background color?",
+"options": [
+"background-color",
+"bg-color",
+"background",
+"color"
+],
+"correct": "background-color"
+},
+{
+"question": "Which company owns GitHub?",
+"options": [
+"Microsoft",
+"Google",
+"Apple",
+"Meta"
+],
+"correct": "Microsoft"
+},
+{
+"question": "Which company developed VS Code?",
+"options": [
+"Microsoft",
+"Google",
+"Apple",
+"IBM"
+],
+"correct": "Microsoft"
+},
+{
+"question": "What does IDE stand for?",
+"options": [
+"Integrated Development Environment",
+"Internet Development Environment",
+"Integrated Design Engine",
+"Internal Development Editor"
+],
+"correct": "Integrated Development Environment"
+},
+{
+"question": "Which command prints text in Python?",
+"options": [
+"print()",
+"show()",
+"display()",
+"echo()"
+],
+"correct": "print()"
+},
+{
+"question": "Which function gets user input in Python?",
+"options": [
+"input()",
+"get()",
+"read()",
+"scan()"
+],
+"correct": "input()"
+},
+{
+"question": "Which operator means 'equal to' in Python?",
+"options": [
+"==",
+"=",
+"===",
+":="
+],
+"correct": "=="
+},
+{
+"question": "Which operator means 'not equal to' in Python?",
+"options": [
+"!=",
+"<>",
+"=/",
+"!=="
+],
+"correct": "!="
+},
+{
+"question": "How many bits are in 1 byte?",
+"options": [
+"8",
+"4",
+"16",
+"32"
+],
+"correct": "8"
+},
+{
+"question": "What does KB stand for?",
+"options": [
+"Kilobyte",
+"Kernel Byte",
+"Key Byte",
+"Kilo Bit"
+],
+"correct": "Kilobyte"
+},
+{
+"question": "What does MB stand for?",
+"options": [
+"Megabyte",
+"Mega Bit",
+"Main Byte",
+"Memory Byte"
+],
+"correct": "Megabyte"
+},
+{
+"question": "What does GB stand for?",
+"options": [
+"Gigabyte",
+"Giga Bit",
+"General Byte",
+"Global Byte"
+],
+"correct": "Gigabyte"
+},
+{
+"question": "Which search engine is most used worldwide?",
+"options": [
+"Google",
+"Bing",
+"Yahoo",
+"DuckDuckGo"
+],
+"correct": "Google"
+},
+{
+"question": "Which company owns Android?",
+"options": [
+"Google",
+"Apple",
+"Microsoft",
+"Samsung"
+],
+"correct": "Google"
+},
+{
+"question": "Which company owns Facebook?",
+"options": [
+"Meta",
+"Google",
+"Microsoft",
+"Apple"
+],
+"correct": "Meta"
+},
+{
+"question": "What is the capital of South Korea?",
+"options": [
+"Seoul",
+"Busan",
+"Tokyo",
+"Beijing"
+],
+"correct": "Seoul"
+},
+{
+"question": "What is the capital of China?",
+"options": [
+"Beijing",
+"Shanghai",
+"Hong Kong",
+"Seoul"
+],
+"correct": "Beijing"
+},
+{
+"question": "What is the capital of Brazil?",
+"options": [
+"Brasilia",
+"Rio de Janeiro",
+"Sao Paulo",
+"Salvador"
+],
+"correct": "Brasilia"
+},
+{
+"question": "Which is the largest rainforest?",
+"options": [
+"Amazon Rainforest",
+"Congo Rainforest",
+"Daintree Rainforest",
+"Valdivian Rainforest"
+],
+"correct": "Amazon Rainforest"
+},
+{
+"question": "Which is the largest island in the world?",
+"options": [
+"Greenland",
+"Australia",
+"Madagascar",
+"Borneo"
+],
+"correct": "Greenland"
+},
+{
+"question": "How many players are on a soccer team on the field?",
+"options": [
+"11",
+"10",
+"9",
+"12"
+],
+"correct": "11"
+},
+{
+"question": "Which sport uses a bat and ball?",
+"options": [
+"Cricket",
+"Football",
+"Hockey",
+"Volleyball"
+],
+"correct": "Cricket"
+},
+{
+"question": "What is the chemical symbol for Oxygen?",
+"options": [
+"O",
+"Ox",
+"Og",
+"Oy"
+],
+"correct": "O"
+},
+{
+"question": "What is the chemical symbol for Hydrogen?",
+"options": [
+"H",
+"Hy",
+"Hg",
+"Hd"
+],
+"correct": "H"
+},
+{
+"question": "What is the chemical symbol for Iron?",
+"options": [
+"Fe",
+"Ir",
+"In",
+"Io"
+],
+"correct": "Fe"
+},
+{
+"question": "How many planets are larger than Earth?",
+"options": [
+"4",
+"3",
+"5",
+"6"
+],
+"correct": "4"
+},
+{
+"question": "Which planet is called the Morning Star?",
+"options": [
+"Venus",
+"Mars",
+"Mercury",
+"Saturn"
+],
+"correct": "Venus"
+},
+{
+"question": "What is 20 × 20?",
+"options": [
+"400",
+"200",
+"300",
+"500"
+],
+"correct": "400"
+},
+{
+"question": "What is 50 × 50?",
+"options": [
+"2500",
+"5000",
+"2000",
+"1500"
+],
+"correct": "2500"
+},
+{
+"question": "What is 100 - 45?",
+"options": [
+"55",
+"65",
+"45",
+"50"
+],
+"correct": "55"
+},
+{
+"question": "What is 75 + 25?",
+"options": [
+"100",
+"95",
+"90",
+"105"
+],
+"correct": "100"
+},
+{
+"question": "How many degrees are in a right angle?",
+"options": [
+"90",
+"180",
+"45",
+"360"
+],
+"correct": "90"
+},
+{
+"question": "How many degrees are in a straight angle?",
+"options": [
+"180",
+"90",
+"360",
+"270"
+],
+"correct": "180"
+},
+{
+"question": "What is the square root of 100?",
+"options": [
+"10",
+"20",
+"5",
+"15"
+],
+"correct": "10"
+},
+{
+"question": "What is the square root of 144?",
+"options": [
+"12",
+"14",
+"10",
+"16"
+],
+"correct": "12"
+},
+{
+"question": "Which scientist discovered gravity?",
+"options": [
+"Isaac Newton",
+"Albert Einstein",
+"Galileo",
+"Nikola Tesla"
+],
+"correct": "Isaac Newton"
+},
+{
+"question": "Which scientist invented AC electricity systems?",
+"options": [
+"Nikola Tesla",
+"Edison",
+"Einstein",
+"Newton"
+],
+"correct": "Nikola Tesla"
+},
+{
+"question": "Which planet is the hottest in the solar system?",
+"options": [
+"Venus",
+"Mercury",
+"Mars",
+"Earth"
+],
+"correct": "Venus"
+},
+{
+"question": "What is the nearest star to Earth?",
+"options": [
+"Sun",
+"Proxima Centauri",
+"Sirius",
+"Polaris"
+],
+"correct": "Sun"
+},
+{
+"question": "What is the largest bone in the human body?",
+"options": [
+"Femur",
+"Skull",
+"Tibia",
+"Humerus"
+],
+"correct": "Femur"
+},
+{
+"question": "How many teeth does an adult human usually have?",
+"options": [
+"32",
+"30",
+"28",
+"34"
+],
+"correct": "32"
+},
+{
+"question": "Which organ filters blood in the human body?",
+"options": [
+"Kidney",
+"Heart",
+"Lungs",
+"Brain"
+],
+"correct": "Kidney"
+},
+{
+"question": "What does AI use to learn from data?",
+"options": [
+"Machine Learning",
+"HTML",
+"CSS",
+"USB"
+],
+"correct": "Machine Learning"
+},
+{
+"question": "Which AI model powers ChatGPT?",
+"options": [
+"GPT",
+"HTML",
+"CSS",
+"SQL"
+],
+"correct": "GPT"
+},
+{
+"question": "What does GPT stand for?",
+"options": [
+"Generative Pre-trained Transformer",
+"General Processing Tool",
+"Graphical Program Transfer",
+"Global Python Technology"
+],
+"correct": "Generative Pre-trained Transformer"
+},
+{
+"question": "Which company created Windows?",
+"options": [
+"Microsoft",
+"Google",
+"Apple",
+"IBM"
+],
+"correct": "Microsoft"
+},
+{
+"question": "Which company created Linux?",
+"options": [
+"Community/Open Source",
+"Microsoft",
+"Apple",
+"Google"
+],
+"correct": "Community/Open Source"
+},
+{
+"question": "What does PDF stand for?",
+"options": [
+"Portable Document Format",
+"Public Data File",
+"Printable Document Form",
+"Portable Data Form"
+],
+"correct": "Portable Document Format"
+},
+{
+"question": "What does JPG store?",
+"options": [
+"Images",
+"Videos",
+"Programs",
+"Audio"
+],
+"correct": "Images"
+},
+{
+"question": "What does MP3 store?",
+"options": [
+"Audio",
+"Video",
+"Images",
+"Documents"
+],
+"correct": "Audio"
+},
+{
+"question": "Which key combination copies selected text?",
+"options": [
+"Ctrl + C",
+"Ctrl + V",
+"Ctrl + X",
+"Ctrl + Z"
+],
+"correct": "Ctrl + C"
+},
+{
+"question": "Which key combination pastes copied text?",
+"options": [
+"Ctrl + V",
+"Ctrl + C",
+"Ctrl + X",
+"Ctrl + Z"
+],
+"correct": "Ctrl + V"
+},
+{
+"question": "Which key combination cuts selected text?",
+"options": [
+"Ctrl + X",
+"Ctrl + C",
+"Ctrl + V",
+"Ctrl + Z"
+],
+"correct": "Ctrl + X"
+},
+{
+"question": "Which key combination undoes an action?",
+"options": [
+"Ctrl + Z",
+"Ctrl + Y",
+"Ctrl + X",
+"Ctrl + C"
+],
+"correct": "Ctrl + Z"
+},
+{
+"question": "What does URL identify?",
+"options": [
+"A web page address",
+"A file type",
+"A computer chip",
+"A keyboard key"
+],
+"correct": "A web page address"
+},
+{
+"question": "Which company owns Gmail?",
+"options": [
+"Google",
+"Microsoft",
+"Apple",
+"Meta"
+],
+"correct": "Google"
+},
+{
+"question": "Which company owns Outlook?",
+"options": [
+"Microsoft",
+"Google",
+"Apple",
+"Yahoo"
+],
+"correct": "Microsoft"
+},
+{
+"question": "What is the default port for HTTP?",
+"options": [
+"80",
+"443",
+"21",
+"25"
+],
+"correct": "80"
+},
+{
+"question": "What is the default port for HTTPS?",
+"options": [
+"443",
+"80",
+"21",
+"25"
+],
+"correct": "443"
+},
+{
+"question": "Which language is used with Flask?",
+"options": [
+"Python",
+"Java",
+"C++",
+"PHP"
+],
+"correct": "Python"
+},
+{
+"question": "Which file stores Python dependencies?",
+"options": [
+"requirements.txt",
+"index.html",
+"style.css",
+"app.js"
+],
+"correct": "requirements.txt"
+},
+{
+"question": "Which platform are you using to host Student AI?",
+"options": [
+"Render",
+"Heroku",
+"Netlify",
+"AWS"
+],
+"correct": "Render"
+},
+{
+"question": "What does WWW stand for?",
+"options": [
+"World Wide Web",
+"World Web Wide",
+"Wide World Web",
+"Web World Wide"
+],
+"correct": "World Wide Web"
+},
+{
+"question": "Which company owns LinkedIn?",
+"options": [
+"Microsoft",
+"Google",
+"Meta",
+"Apple"
+],
+"correct": "Microsoft"
+},
+{
+"question": "What is the largest moon in the solar system?",
+"options": [
+"Ganymede",
+"Titan",
+"Moon",
+"Europa"
+],
+"correct": "Ganymede"
+},
+{
+"question": "How many colors are there in a rainbow?",
+"options": [
+"7",
+"6",
+"8",
+"9"
+],
+"correct": "7"
+},
+{
+"question": "Which planet is called the Blue Planet?",
+"options": [
+"Earth",
+"Neptune",
+"Venus",
+"Mars"
+],
+"correct": "Earth"
+},
+{
+"question": "What is 11 × 11?",
+"options": [
+"121",
+"111",
+"131",
+"141"
+],
+"correct": "121"
+},
+{
+"question": "What is 500 ÷ 5?",
+"options": [
+"100",
+"50",
+"150",
+"75"
+],
+"correct": "100"
+},
+{
+"question": "Which country is known as the Land of the Rising Sun?",
+"options": [
+"Japan",
+"China",
+"India",
+"Thailand"
+],
+"correct": "Japan"
+},
+{
+"question": "Which is the smallest continent?",
+"options": [
+"Australia",
+"Europe",
+"Antarctica",
+"South America"
+],
+"correct": "Australia"
+},
+{
+"question": "Which programming language is known for web development and Flask?",
+"options": [
+"Python",
+"Java",
+"C#",
+"PHP"
+],
+"correct": "Python"
+},
+{
+"question": "What does JSON stand for?",
+"options": [
+"JavaScript Object Notation",
+"Java Standard Object Network",
+"Java Source Object Notation",
+"JSON Style Object Network"
+],
+"correct": "JavaScript Object Notation"
+},
+{
+"question": "Which command uploads code to GitHub?",
+"options": [
+"git push",
+"git pull",
+"git clone",
+"git init"
+],
+"correct": "git push"
+},
+{
+"question": "Which command downloads code from GitHub?",
+"options": [
+"git clone",
+"git push",
+"git add",
+"git commit"
+],
+"correct": "git clone"
+},
+{
+"question": "Which command saves changes in Git?",
+"options": [
+"git commit",
+"git clone",
+"git push",
+"git pull"
+],
+"correct": "git commit"
+},
+{
+"question": "What is the name of your deployed project?",
+"options": [
+"Student AI",
+"School Bot",
+"Smart Tutor",
+"AI Master"
+],
+"correct": "Student AI"
+}
+]

@@ -378,31 +378,21 @@ def history():
 # QUIZ
 # -----------------------------------
 
-
 @app.route("/quiz")
 def quiz():
 
-    with open(
-        "quiz_questions.json",
-        "r"
-    ) as f:
-
+    with open("quiz_questions.json", "r") as f:
         questions = json.load(f)
 
     selected_questions = random.sample(
         questions,
-        min(5, len(questions))
+        min(20, len(questions))
     )
 
     for q in selected_questions:
+        random.shuffle(q["options"])
 
-        random.shuffle(
-            q["options"]
-        )
-
-    session[
-        "quiz_questions"
-    ] = selected_questions
+    session["quiz_questions"] = selected_questions
 
     return render_template(
         "quiz.html",
@@ -410,45 +400,76 @@ def quiz():
     )
 
 
-# -----------------------------------
-# QUIZ RESULT
-# -----------------------------------
+@app.route("/submit_quiz", methods=["POST"])
+def submit_quiz():
 
-@app.route("/quiz_result")
-def quiz_result():
+    questions = session.get("quiz_questions", [])
 
     score = 0
+    results = []
 
-    quiz_questions = session.get(
-        "quiz_questions",
-        []
-    )
+    for i, q in enumerate(questions, start=1):
 
-    for i, question in enumerate(
-        quiz_questions,
-        start=1
-    ):
+        user_answer = request.form.get(f"q{i}")
+        correct_answer = q["correct"]
 
-        user_answer = request.args.get(
-            f"q{i}"
-        )
-
-        if user_answer == question["correct"]:
-
+        if user_answer == correct_answer:
             score += 1
 
+        results.append({
+            "question": q["question"],
+            "user_answer": user_answer,
+            "correct_answer": correct_answer
+        })
+
+    username = session.get("username", "Guest")
+
+    try:
+        with open("leaderboard.json", "r") as f:
+            leaderboard = json.load(f)
+    except:
+        leaderboard = []
+
+    leaderboard.append({
+        "username": username,
+        "score": score,
+        "total": len(questions)
+    })
+
+    leaderboard = sorted(
+        leaderboard,
+        key=lambda x: x["score"],
+        reverse=True
+    )
+
+    with open("leaderboard.json", "w") as f:
+        json.dump(
+            leaderboard,
+            f,
+            indent=4
+        )
+
     return render_template(
-
         "quiz_result.html",
-
         score=score,
-
-        total=len(quiz_questions)
-
+        total=len(questions),
+        results=results
     )
 
 
+@app.route("/leaderboard")
+def leaderboard():
 
+    try:
+        with open("leaderboard.json", "r") as f:
+            scores = json.load(f)
+    except:
+        scores = []
+
+    return render_template(
+        "leaderboard.html",
+        scores=scores[:20]
+    )
 
 # -----------------------------------
 # LOGOUT

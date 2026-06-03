@@ -1,128 +1,90 @@
-
 <!DOCTYPE html>
+
 <html>
-
 <head>
+    <title>Quiz Results</title>
 
-    <title>Quiz Result</title>
 
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='style.css') }}"
-    >
+<style>
+    body{
+        background:#0f172a;
+        color:white;
+        font-family:Arial;
+        padding:30px;
+    }
 
-    <style>
+    .card{
+        background:#1e293b;
+        padding:20px;
+        border-radius:15px;
+        margin-bottom:15px;
+    }
 
-        .result-box{
+    .correct{
+        color:lime;
+    }
 
-            width:600px;
+    .wrong{
+        color:red;
+    }
 
-            margin:auto;
+    .score{
+        font-size:30px;
+        font-weight:bold;
+        color:cyan;
+        margin-bottom:30px;
+    }
 
-            margin-top:120px;
+    button{
+        padding:15px 25px;
+        border:none;
+        border-radius:10px;
+        background:cyan;
+        font-weight:bold;
+        cursor:pointer;
+    }
+</style>
 
-            background:#111827;
-
-            padding:50px;
-
-            border-radius:25px;
-
-            border:2px solid cyan;
-
-            text-align:center;
-
-            box-shadow:0 0 25px rgba(0,255,255,0.2);
-
-        }
-
-        .result-box h1{
-
-            color:cyan;
-
-            margin-bottom:25px;
-
-            text-shadow:0 0 15px cyan;
-
-        }
-
-        .result-box p{
-
-            font-size:22px;
-
-            margin-bottom:30px;
-
-        }
-
-        .result-box a{
-
-            display:inline-block;
-
-            text-decoration:none;
-
-            background:cyan;
-
-            color:black;
-
-            padding:15px 30px;
-
-            border-radius:15px;
-
-            font-weight:bold;
-
-            transition:0.3s;
-
-        }
-
-        .result-box a:hover{
-
-            transform:scale(1.05);
-
-            box-shadow:0 0 20px cyan;
-
-        }
-
-    </style>
 
 </head>
 
 <body>
 
-<div class="result-box">
 
-    <h1>
+<h1>Quiz Results</h1>
 
-        🎉 Quiz Completed
+<div class="score">
+    Score: {{ score }}/{{ total }}
+</div>
 
-    </h1>
+{% for r in results %}
+
+<div class="card">
+
+    <h3>{{ r.question }}</h3>
 
     <p>
-
-   
-
-<p>
-
-    Your Score:
-
-    <br><br>
-
-
-{{ score }}/{{ total }}
-
-
-</p>
-
-
-
+        Your Answer:
+        <span class="wrong">
+            {{ r.user_answer }}
+        </span>
     </p>
 
-    <a href="/chat">
-
-        Back To Chat
-
-    </a>
+    <p>
+        Correct Answer:
+        <span class="correct">
+            {{ r.correct_answer }}
+        </span>
+    </p>
 
 </div>
 
-</body>
+{% endfor %}
 
+<a href="/quiz">
+    <button>Play Again</button>
+</a>
+
+
+</body>
 </html>

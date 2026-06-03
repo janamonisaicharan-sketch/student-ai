@@ -348,5 +348,10 @@
         "user": "janamoni",
         "question": "hello",
         "answer": "Hello! How can I help you today?"
+    },
+    {
+        "user": "janamoni",
+        "question": "who is elon musk",
+        "answer": "Elon Musk - Wikipedia\n\n11 hours ago - Elon Reeve Musk (/\u02c8i\u02d0l\u0252n/ EE-lon; born June 28, 1971) is a businessman and former public official known for his leadership of Tesla and SpaceX. Musk has been the wealthiest person in the world since 2025; as of May 2026, Forbes estimates his net worth to be US$828 billion."
     }
 ]
