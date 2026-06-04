@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template, request, redirect, session
-
+import sqlite3
 from ddgs import DDGS
 
 import requests
@@ -10,10 +10,57 @@ import random
 
 import json
 import os
+import sqlite3
 
+
+def get_db_connection():
+
+    conn = sqlite3.connect("student_ai.db")
+
+    conn.row_factory = sqlite3.Row
+
+    return conn
 app = Flask(__name__)
 app.secret_key = "student_ai_secret"
+conn = get_db_connection()
 
+cursor = conn.cursor()
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE,
+    password TEXT
+)
+""")
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user TEXT,
+    question TEXT,
+    answer TEXT
+)
+""")
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS leaderboard (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
+    score INTEGER,
+    total INTEGER
+)
+""")
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS knowledge (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    question TEXT,
+    answer TEXT
+)
+""")
+conn.commit()
+
+conn.close()
 # -----------------------------------
 # CREATE FILES
 # -----------------------------------
@@ -94,7 +141,6 @@ def get_webpage_text(url):
 # -----------------------------------
 # LOGIN
 # -----------------------------------
-
 @app.route("/", methods=["GET", "POST"])
 def login():
 
@@ -103,20 +149,30 @@ def login():
         username = request.form["username"]
         password = request.form["password"]
 
-        users = load_json("users.json")
+        conn = get_db_connection()
 
-        if username in users:
+        cursor = conn.cursor()
 
-            if users[username] == password:
+        cursor.execute(
+            "SELECT * FROM users WHERE username=? AND password=?",
+            (username, password)
+        )
 
-                session["username"] = username
-                session["current_chat"] = []
+        user = cursor.fetchone()
 
-                return redirect("/chat")
+        conn.close()
+
+        if user:
+
+            session["username"] = username
+            session["current_chat"] = []
+
+            return redirect("/chat")
 
         return "Wrong username or password"
 
     return render_template("login.html")
+
 
 # -----------------------------------
 # SIGNUP
@@ -130,11 +186,18 @@ def signup():
         username = request.form["username"]
         password = request.form["password"]
 
-        users = load_json("users.json")
+        conn = get_db_connection()
 
-        users[username] = password
+        cursor = conn.cursor()
 
-        save_json("users.json", users)
+        cursor.execute(
+            "INSERT INTO users (username, password) VALUES (?, ?)",
+            (username, password)
+        )
+
+        conn.commit()
+
+        conn.close()
 
         return redirect("/")
 
@@ -268,32 +331,29 @@ def chat():
             ] = current_chat
 
             # SAVE HISTORY
+            conn = get_db_connection()
 
-            history = load_json(
-                "history.json"
+            cursor = conn.cursor()
+
+            cursor.execute(
+                """
+                INSERT INTO history
+                (user, question, answer)
+                VALUES (?, ?, ?)
+                """,
+                (
+                    session["username"],
+                    question,
+                    answer
+                )
             )
 
-            history.append({
+            conn.commit()
 
-                "user":
-                session["username"],
-
-                "question":
-                question,
-
-                "answer":
-                answer
-
-            })
-
-            save_json(
-                "history.json",
-                history
-            )
-
+            conn.close()
         # TEACH AI
 
-        elif "teach_answer" in request.form:
+    elif "teach_answer" in request.form:
 
             teach_answer = request.form[
                 "teach_answer"
@@ -423,32 +483,27 @@ def submit_quiz():
         })
 
     username = session.get("username", "Guest")
+    conn = get_db_connection()
 
-    try:
-        with open("leaderboard.json", "r") as f:
-            leaderboard = json.load(f)
-    except:
-        leaderboard = []
+    cursor = conn.cursor()
 
-    leaderboard.append({
-        "username": username,
-        "score": score,
-        "total": len(questions)
-    })
-
-    leaderboard = sorted(
-        leaderboard,
-        key=lambda x: x["score"],
-        reverse=True
+    cursor.execute(
+        """
+        INSERT INTO leaderboard
+        (username, score, total)
+        VALUES (?, ?, ?)
+        """,
+        (
+            username,
+            score,
+            len(questions)
+        )
     )
 
-    with open("leaderboard.json", "w") as f:
-        json.dump(
-            leaderboard,
-            f,
-            indent=4
-        )
+    conn.commit()
 
+    conn.close()
+    
     return render_template(
         "quiz_result.html",
         score=score,
@@ -460,15 +515,26 @@ def submit_quiz():
 @app.route("/leaderboard")
 def leaderboard():
 
-    try:
-        with open("leaderboard.json", "r") as f:
-            scores = json.load(f)
-    except:
-        scores = []
+    conn = get_db_connection()
+
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """
+        SELECT *
+        FROM leaderboard
+        ORDER BY score DESC
+        LIMIT 20
+        """
+    )
+
+    scores = cursor.fetchall()
+
+    conn.close()
 
     return render_template(
         "leaderboard.html",
-        scores=scores[:20]
+        scores=scores
     )
 
 # -----------------------------------
