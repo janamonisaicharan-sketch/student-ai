@@ -165,15 +165,30 @@
   
 <div class="answer typing">
 
-    <span class="ai-label">
-        AI:
-    </span>
 
-    <span class="ai-text">
-        {{item.answer}}
-    </span>
+<span class="ai-label">
+    AI:
+</span>
+
+<span
+    class="ai-text"
+    id="answer{{ loop.index }}"
+>
+    {{item.answer}}
+</span>
+
+<br><br>
+
+<button
+    type="button"
+    onclick="speakText('answer{{ loop.index }}')"
+>
+    🔊 Speak
+</button>
+
 
 </div>
+
 
 
     <br>
@@ -368,6 +383,34 @@ function startVoice() {
 
 
 </body>
+<script>
+
+function speakText(id){
+
+    let text =
+    document.getElementById(id).innerText;
+
+    let speech =
+    new SpeechSynthesisUtterance();
+
+    speech.text = text;
+
+    speech.lang = "en-US";
+
+    speech.rate = 1;
+
+    speech.pitch = 1;
+
+    speech.volume = 1;
+
+    window.speechSynthesis.speak(speech);
+}
+
+</script>
+
+</body>
+
+</html>
 
 <script>
 

@@ -1,6 +1,5 @@
 
 from flask import Flask, render_template, request, redirect, session
-import sqlite3
 from ddgs import DDGS
 
 import requests
@@ -9,7 +8,7 @@ from bs4 import BeautifulSoup
 import random
 
 import json
-import os
+
 import sqlite3
 
 
@@ -61,80 +60,6 @@ CREATE TABLE IF NOT EXISTS knowledge (
 conn.commit()
 
 conn.close()
-# -----------------------------------
-# CREATE FILES
-# -----------------------------------
-
-files = {
-    "users.json": {},
-    "knowledge.json": {},
-    "history.json": []
-}
-
-for file, default_data in files.items():
-
-    if not os.path.exists(file):
-
-        with open(file, "w") as f:
-
-            json.dump(default_data, f)
-
-# -----------------------------------
-# LOAD JSON
-# -----------------------------------
-
-def load_json(file):
-
-    with open(file, "r") as f:
-
-        return json.load(f)
-
-# -----------------------------------
-#save json
-# -----------------------------------
-
-def save_json(file, data):
-
-    with open(file, "w") as f:
-
-        json.dump(data, f, indent=4)
-
-
-
-def get_webpage_text(url):
-
-    try:
-
-        headers = {
-            "User-Agent":
-            "Mozilla/5.0"
-        }
-
-        response = requests.get(
-            url,
-            headers=headers,
-            timeout=10
-        )
-
-        soup = BeautifulSoup(
-            response.text,
-            "html.parser"
-        )
-
-        paragraphs = soup.find_all("p")
-
-        text = ""
-
-        for p in paragraphs[:20]:
-
-            text += p.get_text() + " "
-
-        return text[:3000]
-
-    except:
-
-        return None
-
 
 
           
@@ -233,10 +158,6 @@ def chat():
                 question.lower()
             )
 
-            knowledge = load_json(
-                "knowledge.json"
-            )
-
             # BUILT-IN ANSWERS
 
             if lower_question == "hello":
@@ -257,67 +178,76 @@ def chat():
                     "I am your futuristic AI assistant."
                 )
 
-            # LEARNED ANSWERS
-
-            elif lower_question in knowledge:
-
-                answer = knowledge[
-                    lower_question
-                ]
-
-           
-
-           
-          
-           
-             
-           
-
-     
-            # INTERNET SEARCH
+            # DATABASE KNOWLEDGE
 
             else:
 
-                try:
+                conn = get_db_connection()
 
-                    with DDGS() as ddgs:
+                cursor = conn.cursor()
 
-                        results = list(
-                            ddgs.text(
-                                question,
-                                max_results=1
+                cursor.execute(
+                    """
+                    SELECT answer
+                    FROM knowledge
+                    WHERE question=?
+                    """,
+                    (lower_question,)
+                )
+
+                learned = cursor.fetchone()
+
+                conn.close()
+
+                if learned:
+
+                    answer = learned["answer"]
+
+                else:
+
+                    # INTERNET SEARCH
+
+                    try:
+
+                        with DDGS() as ddgs:
+
+                            results = list(
+                                ddgs.text(
+                                    question,
+                                    max_results=1
+                                )
                             )
-                        )
 
-                    if results:
+                        if results:
+
+                            answer = (
+                                results[0]["title"]
+                                + "\n\n"
+                                + results[0]["body"]
+                            )
+
+                        else:
+
+                            answer = (
+                                "❌ No results found."
+                            )
+
+                            session[
+                                "unknown_question"
+                            ] = lower_question
+
+                    except Exception as e:
 
                         answer = (
-                            results[0]["title"]
-                            + "\n\n"
-                            + results[0]["body"]
+                            "❌ Search error: "
+                            + str(e)
                         )
-
-                    else:
-
-                        answer = "❌ No results found."
 
                         session[
                             "unknown_question"
                         ] = lower_question
 
-                except Exception as e:
-
-                    answer = (
-                        "❌ Search error: "
-                        + str(e)
-                    )
-
-                    session[
-                        "unknown_question"
-                    ] = lower_question
-
-       
-            # SAVE CHAT
+            # SAVE CHAT TO SESSION
 
             current_chat.append({
 
@@ -330,7 +260,8 @@ def chat():
                 "current_chat"
             ] = current_chat
 
-            # SAVE HISTORY
+            # SAVE CHAT HISTORY TO DATABASE
+
             conn = get_db_connection()
 
             cursor = conn.cursor()
@@ -351,17 +282,14 @@ def chat():
             conn.commit()
 
             conn.close()
+
         # TEACH AI
 
-    elif "teach_answer" in request.form:
+        elif "teach_answer" in request.form:
 
             teach_answer = request.form[
                 "teach_answer"
             ]
-
-            knowledge = load_json(
-                "knowledge.json"
-            )
 
             unknown_question = session.get(
                 "unknown_question"
@@ -369,14 +297,25 @@ def chat():
 
             if unknown_question:
 
-                knowledge[
-                    unknown_question
-                ] = teach_answer
+                conn = get_db_connection()
 
-                save_json(
-                    "knowledge.json",
-                    knowledge
+                cursor = conn.cursor()
+
+                cursor.execute(
+                    """
+                    INSERT INTO knowledge
+                    (question, answer)
+                    VALUES (?, ?)
+                    """,
+                    (
+                        unknown_question,
+                        teach_answer
+                    )
                 )
+
+                conn.commit()
+
+                conn.close()
 
                 current_chat.append({
 
@@ -406,10 +345,7 @@ def chat():
         chat=current_chat
 
     )
-
-# -----------------------------------
-# HISTORY
-# -----------------------------------
+    
 
 @app.route("/history")
 def history():
@@ -418,22 +354,28 @@ def history():
 
         return redirect("/")
 
-    history = load_json(
-        "history.json"
+    conn = get_db_connection()
+
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """
+        SELECT *
+        FROM history
+        WHERE user=?
+        ORDER BY id DESC
+        """,
+        (session["username"],)
     )
 
-    history = list(
-        reversed(history)
-    )
+    history = cursor.fetchall()
+
+    conn.close()
 
     return render_template(
-
         "history.html",
-
         history=history
-
     )
-
 # -----------------------------------
 # QUIZ
 # -----------------------------------

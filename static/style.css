@@ -364,7 +364,7 @@ body{
 
 /* MOBILE RESPONSIVE */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px){}
 
     .sidebar{
 
@@ -556,4 +556,48 @@ button[type="submit"]{
     font-size:18px;
 
 }
+body{
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #020617
+    );
+    color:white;
+}
 
+.sidebar{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border-right:1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar a:hover{
+    background:cyan;
+    color:black;
+}
+
+.chat-box{
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+}
+
+.user{
+    background:#2563eb;
+    border-radius:15px;
+}
+
+.bot{
+    background:#1e293b;
+    border-radius:15px;
+}
+
+button{
+    background:cyan;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
