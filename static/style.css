@@ -601,3 +601,39 @@ button{
 button:hover{
     transform:scale(1.05);
 }
+.light-mode{
+
+
+background:white;
+
+color:black;
+
+
+}
+
+.light-mode .sidebar{
+
+
+background:#e5e7eb;
+
+
+}
+
+.light-mode .chat-box{
+
+
+background:#f3f4f6;
+
+color:black;
+
+
+}
+
+.light-mode .topbar{
+
+
+background:white;
+
+
+}
+

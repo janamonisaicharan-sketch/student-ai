@@ -41,6 +41,12 @@
 
 <a href="/clear_chat">Clear Chat</a>
 
+<a href="#" onclick="toggleTheme()">
+
+🌙 Theme
+
+
+</a>
 
         <a href="/logout">
 
@@ -59,6 +65,9 @@
     <!-- TOPBAR -->
 
     <div class="topbar">
+
+</button>
+
 
         <form
             method="POST"
@@ -169,13 +178,16 @@
 <span class="ai-label">
     AI:
 </span>
-
 <span
-    class="ai-text"
-    id="answer{{ loop.index }}"
+class="ai-text typing-text"
+id="answer{{ loop.index }}"
+data-text="{{ item.answer }}"
+
 >
-    {{item.answer}}
+
 </span>
+
+
 
 <br><br>
 
@@ -381,6 +393,42 @@ function startVoice() {
 
 </script>
 
+<script>
+
+window.onload = function(){
+
+    const typingElements =
+    document.querySelectorAll(".typing-text");
+
+    typingElements.forEach((element) => {
+
+        let text =
+        element.getAttribute("data-text");
+
+        let index = 0;
+
+        function typeLetter(){
+
+            if(index < text.length){
+
+                element.innerHTML +=
+                text.charAt(index);
+
+                index++;
+
+                setTimeout(typeLetter, 20);
+
+            }
+
+        }
+
+        typeLetter();
+
+    });
+
+};
+
+</script>
 
 </body>
 <script>
@@ -405,6 +453,36 @@ function speakText(id){
 
     window.speechSynthesis.speak(speech);
 }
+
+</script>
+<script>
+
+function toggleTheme(){
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+
+        localStorage.setItem("theme", "light");
+
+    }else{
+
+        localStorage.setItem("theme", "dark");
+
+    }
+}
+
+window.onload = function(){
+
+    let savedTheme =
+    localStorage.getItem("theme");
+
+    if(savedTheme === "light"){
+
+        document.body.classList.add("light-mode");
+
+    }
+};
 
 </script>
 
@@ -442,4 +520,5 @@ function startVoice() {
 
 
 </html>
+
 
