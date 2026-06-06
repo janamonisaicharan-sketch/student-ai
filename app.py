@@ -57,6 +57,15 @@ CREATE TABLE IF NOT EXISTS knowledge (
     answer TEXT
 )
 """)
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS notes (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+username TEXT,
+note TEXT
+)
+""")
+
+
 conn.commit()
 
 conn.close()
@@ -479,6 +488,29 @@ def leaderboard():
         scores=scores
     )
 
+#-------------------------------------
+# NOTE
+#-------------------------------------
+@app.route("/save_note", methods=["POST"])
+def save_note():
+
+    if "username" not in session:
+        return redirect("/")
+
+    note = request.form["note"]
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "INSERT INTO notes (username, note) VALUES (?, ?)",
+        (session["username"], note)
+    )
+
+    conn.commit()
+    conn.close()
+
+    return redirect("/chat")
 # -----------------------------------
 # LOGOUT
 # -----------------------------------
@@ -499,7 +531,6 @@ def clear_chat():
     session["current_chat"] = []
 
     return redirect("/chat")
-
 
 # -----------------------------------
 # RUN APP

@@ -179,11 +179,23 @@
     AI:
 </span>
 <span
-class="ai-text typing-text"
-id="answer{{ loop.index }}"
-data-text="{{ item.answer }}"
+class="ai-text typing-effect"
 
 >
+
+{{item.answer}}
+
+
+</span>
+
+
+
+
+
+
+
+</span>
+
 
 </span>
 
@@ -192,11 +204,41 @@ data-text="{{ item.answer }}"
 <br><br>
 
 <button
-    type="button"
-    onclick="speakText('answer{{ loop.index }}')"
+onclick="speakAnswer(`{{ item.answer }}`)"
+class="speak-btn"
+
 >
-    🔊 Speak
+
+
+🔊 Speak
+
+
 </button>
+<form
+    action="/save_note"
+    method="POST"
+>
+
+
+<input
+    type="hidden"
+    name="note"
+    value="{{ item.answer }}"
+>
+
+<button
+    type="submit"
+    class="save-btn"
+>
+
+    📝 Save Note
+
+</button>
+
+
+</form>
+
+
 
 
 </div>
@@ -483,6 +525,74 @@ window.onload = function(){
 
     }
 };
+
+</script>
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+    const elements =
+    document.querySelectorAll(
+        ".typing-effect"
+    );
+
+    elements.forEach((element) => {
+
+        let text =
+        element.textContent;
+
+        element.textContent = "";
+
+        let i = 0;
+
+        function typeLetter(){
+
+            if(i < text.length){
+
+                element.textContent +=
+                text.charAt(i);
+
+                i++;
+
+                setTimeout(
+                    typeLetter,
+                    15
+                );
+
+            }
+
+        }
+
+        typeLetter();
+
+    });
+
+});
+
+</script>
+
+
+</script>
+<script>
+
+function speakAnswer(text){
+
+    const speech =
+    new SpeechSynthesisUtterance(text);
+
+    speech.lang = "en-US";
+
+    speech.rate = 1;
+
+    speech.pitch = 1;
+
+    speech.volume = 1;
+
+    window.speechSynthesis.speak(speech);
+
+}
 
 </script>
 

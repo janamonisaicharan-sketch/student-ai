@@ -637,3 +637,53 @@ background:white;
 
 }
 
+.typing-effect{
+
+
+border-right:2px solid cyan;
+
+animation: blinkCursor 0.8s infinite;
+
+
+}
+
+@keyframes blinkCursor{
+
+
+50%{
+    border-color:transparent;
+}
+
+
+}
+.save-btn{
+
+
+margin-top:10px;
+
+padding:10px 18px;
+
+border:none;
+
+border-radius:12px;
+
+background:#10b981;
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+
+}
+
+.save-btn:hover{
+
+
+transform:scale(1.05);
+
+
+}
